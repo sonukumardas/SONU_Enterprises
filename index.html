@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SONU Enterprises</title>
+  <link rel="icon" type="image/png" href="icons/sonu_logo.png">
+  <style>
+    /* Reused / unified styling (keeps same background, fonts and visual feel) */
+    :root{ --teal-dark:#005a7a; --teal:#007a8a; --accent:#0097a7; --card:#e6fbfd; --text:#004d5a; }
+    html,body{ margin:0; padding:0; font-family: 'Segoe UI', Arial, sans-serif; background:#f8fafc; color:var(--text); }
+    header{ display:flex; align-items:center; justify-content:space-between; gap:18px; padding:16px 18px; border-left:5px solid var(--teal-dark); background:linear-gradient(90deg,var(--teal),var(--teal-dark)); color:#fff; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+    header .brand{ display:flex; align-items:center; gap:16px; }
+    header img.logo{ height:64px; width:auto; border-radius:8px; }
+    header .title{ font-size:1.95rem; font-weight:600; color:#fff; text-shadow:0 1px 3px rgba(0,0,0,0.18); }
+    header .contact{ min-width:260px; background:var(--card); color:var(--text); padding:14px 18px; border-radius:8px; box-shadow:0 2px 12px rgba(0,90,122,0.12); border-right:5px solid var(--accent); font-weight:600; }
+    main{ max-width:1100px; margin:28px auto; padding:0 18px; }
+    section.card{ background:#fff; border-radius:10px; padding:22px; box-shadow:0 2px 8px rgba(0,90,122,0.06); margin-bottom:20px; }
+    h1,h2{ color:var(--teal-dark); margin:0 0 12px 0; }
+    p.lead{ color:var(--teal); font-size:1.1rem; line-height:1.6; }
+
+    /* Services grid */
+    .services-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; align-items:start; }
+    .service{ border-radius:10px; padding:18px; background:linear-gradient(180deg,#fff,#f7fffe); box-shadow:0 4px 10px rgba(0,0,0,0.04); }
+    .service h3{ margin:0 0 8px 0; color:var(--teal-dark); }
+    .service p{ margin:0; color:var(--text); line-height:1.45; }
+
+    /* Merchant categories */
+    .categories{ display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
+    .cat{ min-width:180px; max-width:260px; flex:1 1 200px; background:var(--card); padding:14px; border-radius:10px; text-align:center; box-shadow:0 3px 8px rgba(0,151,167,0.08); }
+    .cat h4{ margin:8px 0; color:var(--teal-dark); }
+    .cat p{ margin:6px 0 0 0; font-weight:600; color:var(--text); }
+
+    /* Testimonials */
+    #review-carousel{ max-width:640px; margin:0 auto; position:relative; }
+    #review-slide{ background:var(--card); padding:18px; border-radius:10px; box-shadow:0 2px 12px rgba(0,151,167,0.10); min-height:110px; }
+    button.review-btn{ position:absolute; top:50%; transform:translateY(-50%); background:var(--accent); color:#fff; border:none; width:36px; height:36px; border-radius:50%; font-size:1.1rem; cursor:pointer; }
+    #prevReview{ left:-48px; }
+    #nextReview{ right:-48px; }
+
+    /* Contact / footer card */
+    .contact-card{ width:100%; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; background:#f3f3f3; padding:32px 14px; gap:18px; }
+    .contact-card .col{ flex:1 1 260px; display:flex; flex-direction:column; align-items:center; padding:12px; }
+    .contact-card img{ width:140px; height:auto; margin-bottom:10px; }
+    .contact-card h3{ margin:6px 0; color:var(--teal-dark); }
+    .contact-row{ display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap; }
+
+    footer{ text-align:center; padding:12px 0; background:linear-gradient(90deg,var(--teal-dark),var(--teal)); color:#fff; font-weight:600; margin-top:28px; }
+
+    /* Responsive tweaks */
+    @media (max-width:900px){ header{ flex-direction:column; align-items:center; gap:12px; text-align:center; } header .contact{ min-width:unset; width:95%; } .review-btn{ display:none; }
+      .contact-card img{ width:120px; }
+    }
+    @media (max-width:420px){ header .title{ font-size:1.1rem; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img class="logo" src="icons/sonu_enterprises.png" alt="SONU Enterprises logo">
+      <div class="title">SONU Enterprises</div>
+    </div>
+    <div class="contact">
+      <div style="color:var(--accent); font-weight:700; margin-bottom:8px;">Contact Us</div>
+      <div style="margin-bottom:6px;"><strong>Phone:</strong> +91 8096302672</div>
+      <div><strong>Email:</strong> sonuenterprisesbiz@gmail.com</div>
+    </div>
+  </header>
+
+  <main>
+    
+
+    <section class="card">
+      <h2 style="text-align:center; font-size:1.8rem; color:var(--accent);">About SONU Enterprises</h2>
+      <p style="text-align:center; margin-top:10px; color:var(--text); font-size:1.05rem; line-height:1.6;">SONU Enterprises provides end-to-end merchant payment solutions tailored for high-volume industries — from travel and insurance to transportation and utilities. We focus on secure, reliable integrations and clear settlement flows so businesses can accept payments, manage revenue, and scale with confidence.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:18px;">
+        <div style="background:#fff; padding:16px; border-radius:10px; box-shadow:0 3px 10px rgba(0,90,122,0.06);">
+          <h3 style="margin:0 0 8px 0; color:var(--teal-dark);">Why Choose Us</h3>
+          <ul style="margin:0; padding-left:18px; color:var(--text); line-height:1.6;">
+            <li>Proven payment integrations with quick time-to-market</li>
+            <li>Industry-specific merchant workflows and reporting</li>
+            <li>Strong focus on security, compliance and uptime</li>
+          </ul>
+        </div>
+        <div style="background:#fff; padding:16px; border-radius:10px; box-shadow:0 3px 10px rgba(0,90,122,0.06);">
+          <h3 style="margin:0 0 8px 0; color:var(--teal-dark);">Key Features</h3>
+          <p style="margin:0; color:var(--text); line-height:1.6;">Scalable APIs, flexible settlement cycles, robust reconciliation, developer-friendly docs, webhook support, and tokenization for card security.</p>
+        </div>
+        <div style="background:#fff; padding:16px; border-radius:10px; box-shadow:0 3px 10px rgba(0,90,122,0.06);">
+          <h3 style="margin:0 0 8px 0; color:var(--teal-dark);">Operating Model</h3>
+          <p style="margin:0; color:var(--text); line-height:1.6;">We partner with payment processors and wallet providers, offering a single integration point for merchants with dashboard access for settlements, disputes, and analytics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 style="text-align:center; font-size:1.8rem; color:var(--accent);">Merchant Categories</h2>
+      <p style="text-align:center; margin:8px 0 18px 0; color:var(--text); font-weight:600;">We specialize in merchant services across these categories:</p>
+      <div class="categories">
+        <div class="cat"><svg width="36" height="36" viewBox="0 0 24 24" style="display:block;margin:0 auto"><path d="M12 2l3 7h6l-5 4 2 7-6-4-6 4 2-7-5-4h6z" fill="none" stroke="#0097a7" stroke-width="1.6"/></svg><h4>Travel</h4><p>Bookings, ticketing, dynamic pricing</p></div>
+        <div class="cat"><svg width="36" height="36" viewBox="0 0 24 24" style="display:block;margin:0 auto"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="#0097a7" stroke-width="1.6"/></svg><h4>web design</h4><p>Website design, UI/UX &amp; frontend development</p></div>
+        <div class="cat"><svg width="36" height="36" viewBox="0 0 24 24" style="display:block;margin:0 auto"><path d="M3 12h18" fill="none" stroke="#0097a7" stroke-width="1.6"/></svg><h4>FASTag / Toll</h4><p>Tag issuance &amp; auto-recharge flows</p></div>
+        <div class="cat"><svg width="36" height="36" viewBox="0 0 24 24" style="display:block;margin:0 auto"><path d="M12 2a10 10 0 1 0 0 20" fill="none" stroke="#0097a7" stroke-width="1.6"/></svg><h4>Utilities</h4><p>Bills, recharge &amp; EMIs</p></div>
+        <div class="cat"><svg width="36" height="36" viewBox="0 0 24 24" style="display:block;margin:0 auto"><circle cx="12" cy="8" r="3" fill="none" stroke="#0097a7" stroke-width="1.6"/></svg><h4>Hospitality</h4><p>Hotel bookings and POS integrations</p></div>
+        <div class="cat"><svg width="36" height="36" viewBox="0 0 24 24" style="display:block;margin:0 auto"><path d="M4 7h16v10H4z" fill="none" stroke="#0097a7" stroke-width="1.6"/></svg><h4>E-commerce</h4><p>Checkout, orders and reconciliation</p></div>
+        <div class="cat"><svg width="36" height="36" viewBox="0 0 24 24" style="display:block;margin:0 auto"><path d="M3 12h18" fill="none" stroke="#0097a7" stroke-width="1.6"/></svg><h4>Software install</h4><p>OS setup, drivers and software deployment</p></div>
+        <div class="cat"><svg width="36" height="36" viewBox="0 0 24 24" style="display:block;margin:0 auto"><path d="M2 12h20" fill="none" stroke="#0097a7" stroke-width="1.6"/></svg><h4>Computer programming</h4><p>Software development, scripts &amp; automation</p></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="card" style="text-align:center;">
+      <h2 style="color:var(--accent);">Client Reviews</h2>
+      <div id="review-carousel">
+        <div id="review-slide"></div>
+        <button id="prevReview" class="review-btn">&#8592;</button>
+        <button id="nextReview" class="review-btn">&#8594;</button>
+      </div>
+    </section>
+
+    <!-- Contact / Footer Card -->
+    <section class="contact-card">
+      <div class="col">
+        <img src="icons/sonu_enterprises.png" alt="SONU Enterprises logo">
+        <h3>SONU Enterprises</h3>
+        <div class="contact-row"><span><strong>Phone:</strong> +91 8096302672</span></div>
+        <div class="contact-row"><span><strong>Email:</strong> sonuenterprisesbiz@gmail.com</span></div>
+      </div>
+
+      <div class="col">
+        <h3>Address</h3>
+        <p style="text-align:center; margin:0;">Plot no : 4-53-163,<br> Maqdum Nagar, Jagathiri Gutta, Hyderabad, 500037</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SONU Enterprises. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple review carousel (keeps same behaviour as original)
+    const reviews = [
+      { text: '"SONU Enterprises helped us move our payments stack to production quickly and reliably."', author: '– Priya S.' },
+      { text: '"Great onboarding and support. Settlements are always on time."', author: '– Rahul M.' },
+      { text: '"Professional team, clear documentation and timely fixes."', author: '– Anjali T.' }
+    ];
+
+    let currentReview = 0; let reviewInterval;
+    function showReview(i){ const r = reviews[i]; document.getElementById('review-slide').innerHTML =
+      ` <p style="font-size:1.1rem; color:var(--text); margin-bottom:8px;">${r.text}</p><span style="font-weight:700;color:var(--accent);">${r.author}</span>`;
+    }
+    function nextReview(){ currentReview = (currentReview+1)%reviews.length; showReview(currentReview); }
+    function prevReview(){ currentReview = (currentReview-1+reviews.length)%reviews.length; showReview(currentReview); }
+    document.getElementById('prevReview').onclick = function(){ prevReview(); resetInterval(); };
+    document.getElementById('nextReview').onclick = function(){ nextReview(); resetInterval(); };
+    function startInterval(){ reviewInterval = setInterval(nextReview, 3000); }
+    function resetInterval(){ clearInterval(reviewInterval); startInterval(); }
+    showReview(currentReview); startInterval();
+  </script>
+</body>
+</html>

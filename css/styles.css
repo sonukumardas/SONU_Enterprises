@@ -1,0 +1,335 @@
+/* ============================================================
+   SONU Technology Private Limited — Final CSS (Unified Colors)
+   Version: 2025 | Responsive | Contact-card colors unified
+   ============================================================ */
+
+/* === Base Styles === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #004d5a;
+}
+
+header, main, footer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* === Header Styling === */
+header {
+    background: linear-gradient(90deg, #007a8a, #005a7a);
+    color: #ffffff;
+    padding: 16px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+header img {
+    border-radius: 8px;
+    width: 120px;
+    height: auto;
+}
+
+header span {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    font-weight: 600;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    background: transparent !important;
+    z-index: 50;
+}
+
+header span:hover {
+    color: #e0f7fa !important;
+    text-shadow: 0 0 6px rgba(255,255,255,0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+/* === Responsive Header Adjustments === */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0;
+    text-align: center;
+  }
+  header img {
+    width: 100px;
+    margin-bottom: 6px;
+  }
+  header span {
+    font-size: 1.15rem !important;
+  }
+}
+
+@media (max-width: 420px) {
+  header span {
+    font-size: 1rem !important;
+  }
+}
+
+/* === Navigation === */
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* === Section Styling === */
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 90, 122, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 4px 16px rgba(0, 90, 122, 0.15);
+}
+
+h1, h2 {
+    margin: 0 0 12px 0;
+    color: #005a7a;
+    font-weight: 700;
+}
+
+/* === Footer === */
+footer {
+    text-align: center;
+    padding: 12px 0;
+    background: linear-gradient(90deg, #005a7a, #007a8a);
+    color: #ffffff;
+    font-weight: 500;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    letter-spacing: 0.3px;
+    border-top: 3px solid #0097a7;
+}
+
+/* === Buttons === */
+.payment-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00a9b5;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 169, 181, 0.2);
+    transition: all 0.3s ease;
+}
+
+.payment-button:hover {
+    background: #007a8a;
+    box-shadow: 0 4px 12px rgba(0, 122, 138, 0.3);
+}
+
+/* === Review Carousel === */
+#review-slide {
+    transition: all 0.5s ease-in-out;
+}
+
+button#prevReview, button#nextReview {
+    transition: background 0.3s ease;
+}
+
+button#prevReview:hover, button#nextReview:hover {
+    background: #00a9b5;
+}
+
+/* === Utility Classes === */
+.text-center { text-align: center; }
+.rounded { border-radius: 10px; }
+.shadow { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+
+/* ========================================================
+   Contact Card / Footer contact area — unified appearance
+   ========================================================
+
+   We target the current HTML structure using the inline-style
+   selector you already have (section[style*="background:#f3f3f3"])
+   and the header contact box selector header div[style*="background: #e0f7fa"].
+
+   The rules below FORCE identical background, color, and text-shadow
+   behavior across all viewport sizes so desktop and mobile match.
+   ======================================================== */
+
+:root{
+  --contact-bg: #e6fbfd;    /* pale cyan card background (visible on desktop & mobile) */
+  --contact-text: #004d5a;  /* dark teal text */
+  --contact-heading: #005a7a;
+}
+
+/* Base appearance for contact card (applies to all sizes) */
+section[style*="background:#f3f3f3"],
+header div[style*="background: #e0f7fa"],
+section[style*="background:#f3f3f3"] > div {
+  background-color: var(--contact-bg) !important;
+  color: var(--contact-text) !important;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 6px 0 rgba(0,90,122,0.08); /* slight base shadow */
+}
+
+/* Ensure every element inside the contact card inherits readable color and no heavy shadow */
+section[style*="background:#f3f3f3"] *,
+header div[style*="background: #e0f7fa"] * {
+  color: var(--contact-text) !important;
+  text-shadow: none !important;   /* remove any white/washed shadow */
+  font-weight: 600;
+}
+
+/* Headings / labels inside contact card */
+section[style*="background:#f3f3f3"] h3,
+header div[style*="background: #e0f7fa"] span,
+section[style*="background:#f3f3f3"] .contact-title,
+section[style*="background:#f3f3f3"] strong {
+  color: var(--contact-heading) !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+
+/* Contact lines formatting */
+section[style*="background:#f3f3f3"] .contact-row,
+section[style*="background:#f3f3f3"] .contact-row span,
+section[style*="background:#f3f3f3"] .contact-row a,
+section[style*="background:#f3f3f3"] p {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 6px 0;
+  color: var(--contact-text) !important;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+/* icon appearance (keeps icons visible and small) */
+section[style*="background:#f3f3f3"] svg,
+header div[style*="background: #e0f7fa"] svg {
+  fill: var(--contact-heading) !important;
+  stroke: var(--contact-heading) !important;
+  color: var(--contact-heading) !important;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* ========================================================
+   Mobile-specific layout (stacking + spacing)
+   ======================================================== */
+@media (max-width: 700px) {
+
+  /* Stack contact card contents */
+  section[style*="background:#f3f3f3"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px;
+    padding: 20px 12px !important;
+  }
+
+  /* Footer logo size inside the contact card */
+  section[style*="background:#f3f3f3"] img {
+    width: 140px !important;
+    max-width: 60% !important;
+    height: auto !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+  }
+
+  /* Centered company name */
+  section[style*="background:#f3f3f3"] h3 {
+    font-size: 1.05rem !important;
+    text-align: center !important;
+    margin: 6px 0 8px 0 !important;
+  }
+
+  /* Make contact rows stack and center on mobile */
+  section[style*="background:#f3f3f3"] .contact-row,
+  section[style*="background:#f3f3f3"] > div:nth-child(1) > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* Contact lines readable size on mobile */
+  section[style*="background:#f3f3f3"] span,
+  section[style*="background:#f3f3f3"] a,
+  section[style*="background:#f3f3f3"] p {
+    font-size: 0.95rem !important;
+    line-height: 1.3 !important;
+    color: var(--contact-text) !important;
+    font-weight: 600 !important;
+  }
+
+  /* Keep header contact box background consistent */
+  header div[style*="background: #e0f7fa"] {
+    background-color: var(--contact-bg) !important;
+  }
+}
+
+/* ========================================================
+   Desktop-specific fine-tuning
+   (ensures the desktop card matches mobile colors exactly)
+   ======================================================== */
+@media (min-width: 701px) {
+  section[style*="background:#f3f3f3"],
+  header div[style*="background: #e0f7fa"] {
+    background-color: var(--contact-bg) !important;
+  }
+
+  section[style*="background:#f3f3f3"] *,
+  header div[style*="background: #e0f7fa"] * {
+    color: var(--contact-text) !important;
+    text-shadow: none !important;
+  }
+
+  section[style*="background:#f3f3f3"] h3,
+  section[style*="background:#f3f3f3"] strong {
+    color: var(--contact-heading) !important;
+    font-weight: 700 !important;
+  }
+
+  /* Tidy spacing for desktop card */
+  section[style*="background:#f3f3f3"] > div {
+    padding: 18px !important;
+  }
+}
+
+/* ========================================================
+   Prevent horizontal overflow from unexpected elements
+   ======================================================== */
+html, body {
+  overflow-x: hidden;
+}
